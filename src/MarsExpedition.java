@@ -41,21 +41,23 @@ public class MarsExpedition {
         String snack = input.nextLine();
         System.out.println("Nice choice, you will be bringing " + snack + " with you." );
 
-        System.out.println("You have the choice of 3 Vehicles"  + "\nA: A Mars Rover" + "\nB: A Chevy Silverado" + "\nC: A Honda Accord");
-        char choice = input.nextLine().charAt(0);
+        System.out.println("You have the choice of 3 Vehicles"  +
+                "\nA: A Mars Rover" +
+                "\nB: A Chevy Silverado" +
+                "\nC: A Honda Accord");
 
         String vehicleChoice = input.nextLine();
-        switch (choice){
-            case 'A':
-                vehicleChoice = "Mars Rover";
-                break;
-            case 'B':
-                vehicleChoice = "Chevy Silverado";
-                break;
-            case 'C':
-                vehicleChoice = "Honda Accord";
-                break;
+
+        if (vehicleChoice.equalsIgnoreCase("A")) {
+            vehicleChoice = "a Mars Rover";
+        } else if (vehicleChoice.equalsIgnoreCase("B")) {
+            vehicleChoice = "a Chevy Silverado";
+        } else if (vehicleChoice.equalsIgnoreCase("C")) {
+            vehicleChoice = "a Honda Civic";
+        } else {
+            vehicleChoice = "your feet";
         }
+
         System.out.println("Alright " + name + ". You are taking a team of " + teamSize + " with you on your expedition. Th snack you are bringing is " + snack + ". The vehicle you will be taking with you is a " + vehicleChoice +
                 "\nExploration team heads out in" +
                 "\n5...." +
